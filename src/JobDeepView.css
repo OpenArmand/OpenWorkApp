@@ -1,0 +1,216 @@
+/* JobInfo.css */
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap');
+
+body {
+  font-family: 'Satoshi', sans-serif;
+  background-color: white; /* Setting overall background color */
+  margin: 0;
+}
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 0px solid white;
+  box-sizing: border-box;
+}
+.flag2 p {
+  margin: 0 10px 0 0;
+  font-size: 16px;
+}
+.flag2 { 
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    align-items: center;
+    margin: -20px 0px 40px 0px;
+}
+.info-container {
+  padding: 5px;
+  max-width: 800px;
+  height: 800px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info-content {
+    background-color: transparent;
+    border-radius: 10px;
+    margin-top: 0px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 545px;
+}
+
+.info-navigation {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+#back{
+  width:40px;
+  height:40px;
+}
+
+.infoTitle {
+  font-size: 20px;
+
+}
+
+.contractAddress {
+  justify-content: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.copyIcon {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.sectionTitle {
+
+  font-family: 'Satoshi' , sans-serif;
+  width: 520px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.02em;
+  color: #4D4D4D;
+  margin-bottom: 20px;
+  margin-left: -30px;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px whitesmoke;
+}
+.title-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.info-cardJ {
+  margin-top: 20px;
+  border: 1px solid #f5f5f5;
+  padding: 20px;
+  padding-left: 30px;
+  border-radius: 24px;
+  background-color: transparent;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 2px solid whitesmoke;
+}
+
+.detail-row {
+  margin-bottom: 20px;
+}
+
+.detail-label {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #767676;
+  margin-bottom: 5px;
+}
+
+.detail-value {
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  display: flex;
+  align-items: center;
+
+  /* Base/Black */
+  color: #050505;
+}
+
+.detail-value-address{
+
+  font-family: 'Satoshi' , sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+
+  /* Base/Black */
+  color: #050505;
+  color: color(display-p3 0.020 0.020 0.020);
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+.description-value {
+  display: block;
+}
+
+.description-value p {
+  margin-bottom: 10px;
+  margin-top: 3px;
+  ont-family: 'Satoshi' , sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  /* or 200% */
+
+  /* Base/Black */
+  color: #050505;
+}
+
+.description-list {
+  margin-top: 10px;
+  padding-left: 0px;
+  list-style-type: disc;
+}
+
+.description-list li {
+  margin-bottom: 5px;
+}
+
+.Job {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.infoIcon {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
