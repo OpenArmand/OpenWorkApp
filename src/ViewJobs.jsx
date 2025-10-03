@@ -4,67 +4,23 @@ import { Link } from "react-router-dom";
 import Web3 from "web3";
 import L1ABI from "./L1ABI.json"; // Import the L1 contract ABI
 import "./ViewJobs.css";
+import { formatWalletAddress } from "./functions/formatWalletAddress"; // Utility function to format wallet address
+import { useWalletConnection } from "./functions/useWalletConnection"; // Manages wallet connection logic
 
 export default function ViewJobs() {
   const [jobs, setJobs] = useState([]);
   const [account, setAccount] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const jobsPerPage = 5; // Number of jobs per page
-
-  const [walletAddress, setWalletAddress] = useState("");
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [loading, setLoading] = useState(true); // Loading state
+  const { walletAddress, connectWallet, disconnectWallet } =
+    useWalletConnection();
 
   const navigate = useNavigate();
 
-  function formatWalletAddress(address) {
-    if (!address) return "";
-    const start = address.substring(0, 4);
-    const end = address.substring(address.length - 4);
-    return `${start}....${end}`;
-  }
-
-  const connectWallet = async () => {
-    if (window.ethereum) {
-      try {
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        setWalletAddress(accounts[0]);
-      } catch (error) {
-        console.error("Failed to connect wallet:", error);
-      }
-    } else {
-      alert("MetaMask is not installed. Please install it to use this app.");
-    }
-  };
-
-  useEffect(() => {
-    const checkWalletConnection = async () => {
-      if (window.ethereum) {
-        try {
-          const accounts = await window.ethereum.request({
-            method: "eth_accounts",
-          });
-          if (accounts.length > 0) {
-            setWalletAddress(accounts[0]);
-          }
-        } catch (error) {
-          console.error("Failed to check wallet connection:", error);
-        }
-      }
-    };
-
-    checkWalletConnection();
-  }, []);
-
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
-  };
-
-  const disconnectWallet = () => {
-    setWalletAddress("");
-    setDropdownVisible(false);
   };
 
   useEffect(() => {
